@@ -62,16 +62,16 @@
     <!-- Search -->
     <div class="container" style="background-image: url(./img/font4.jpg); background-size: cover;">
         <!-- title -->
-        <h1 id="title">Search<br>Recipe</h1>
+        <h1 id="title">Recipe<br>Search</h1>
         <!-- Barra de busqueda -->
         <div id="Barra" class="d-flex justify-content-center px-5 mx-5">
             <input id="inputText" class="form-control" type="text" placeholder="Search" aria-label="">
-            <button class="btn btn-info" type="button">
+            <button class="btn btn-info" type="button" id="search-btn">
                 <div class="d-flex justify-content-center align-items-center">
                     <img src="./img/search.svg" alt="search">
                 </div>
             </button>
-            <button class="btn btn-warning " type="button">
+            <button class="btn btn-warning " type="button" id="random">
                 <div class="d-flex justify-content-center align-items-center">
                     <img src="./img/shuffle.svg" alt="search">
                 </div>
@@ -83,12 +83,12 @@
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
         data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
-            <div class="modal-content">
+            <div class="modal-content meal-details-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body" id="modalBody">
                     ...
                 </div>
                 <div class="modal-footer">
@@ -101,45 +101,9 @@
     <!-- Resultados -->
     <div class="container" style="display: block;">
         <h4> Dar click en los Resultados</h4>
-        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
+        <div id="meal" class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
             <div class="col">
                 <div class="card h-100 " data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <img src="https:\/\/www.themealdb.com\/images\/media\/meals\/ustsqw1468250014.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Arrabiata</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <img src="https:\/\/www.themealdb.com\/images\/media\/meals\/ustsqw1468250014.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Arrabiata</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <img src="https:\/\/www.themealdb.com\/images\/media\/meals\/ustsqw1468250014.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Arrabiata</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <img src="https:\/\/www.themealdb.com\/images\/media\/meals\/ustsqw1468250014.jpg"
-                        class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Arrabiata</h5>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card h-100" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <img src="https:\/\/www.themealdb.com\/images\/media\/meals\/ustsqw1468250014.jpg"
                         class="card-img-top" alt="...">
                     <div class="card-body">
@@ -155,6 +119,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
+    <script src="JS/script.js"></script>   
 </body>
 
 </html>

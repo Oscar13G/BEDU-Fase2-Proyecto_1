@@ -3,14 +3,18 @@ const mealList = document.getElementById("meal")
 const mealDetailsContent = document.querySelector(".meal-details-content")
 const recipeCloseBtn = document.getElementById("recipe-close-btn")
 const searchLetter = document.querySelector(".search-letter")
+const input = document.getElementById("inputText")
+const random = document.getElementById("random")
 
 // Event Listeners
 searchBtn.addEventListener("click", getMealList)
 mealList.addEventListener("click", getMealRecipe)
-recipeCloseBtn.addEventListener("click", () => {
-    mealDetailsContent.parentElement.classList.remove("showRecipe")
-});
-searchLetter.addEventListener("click", getMealByFirstLetter)
+input.addEventListener("keyup", EnterGo)
+random.addEventListener("click", getRandomMeal)
+// recipeCloseBtn.addEventListener("click", () => {
+//     mealDetailsContent.parentElement.classList.remove("showRecipe")
+// });
+// searchLetter.addEventListener("click", getMealByFirstLetter)
 
 // Create Letter Menu
 let letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
@@ -23,68 +27,68 @@ for (let i = 0; i < letters.length; i++) {
     </button>
     `
 }
-searchLetter.innerHTML = html;
+//searchLetter.innerHTML = html;
 
 // Get Recipe List by First Letter
 function getMealByFirstLetter(e) {
-    let mealLetter = e.target.dataset.id
-    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${mealLetter}`)
-        .then((response) => response.json())
-        .then((data) => {
-            let html = ""
-            if (data.meals) {
-                data.meals.forEach((meal) => {
-                    html += `
-            <div class="meal-item">
-                <div class="meal-img" data-id="${meal.idMeal}">
-                    <img src="${meal.strMealThumb}" alt="food" />
-                </div>
-                <div class="meal-name" data-id="${meal.idMeal}">
-                    <h3>${meal.strMeal}</h3>
-                    <a href="#" class="recipe-btn">Show Recipe</a>
-                    <a href="#" class="recipe-btn-ingredient">Show ingredients</a>
-                </div>
-            </div>
-              `
-                })
-                mealList.classList.remove("notFound")
-            } else {
-                html = "Ops, Not found the recipe!"
-                mealList.classList.add("notFound")
-            }
+    // let mealLetter = e.target.dataset.id
+    // fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${mealLetter}`)
+    //     .then((response) => response.json())
+    //     .then((data) => {
+    //         let html = ""
+    //         if (data.meals) {
+    //             data.meals.forEach((meal) => {
+    //                 html += `
+    //         <div class="meal-item">
+    //             <div class="meal-img" data-id="${meal.idMeal}">
+    //                 <img src="${meal.strMealThumb}" alt="food" />
+    //             </div>
+    //             <div class="meal-name" data-id="${meal.idMeal}">
+    //                 <h3>${meal.strMeal}</h3>
+    //                 <a href="#" class="recipe-btn">Show Recipe</a>
+    //                 <a href="#" class="recipe-btn-ingredient">Show ingredients</a>
+    //             </div>
+    //         </div>
+    //           `
+    //             })
+    //             mealList.classList.remove("notFound")
+    //         } else {
+    //             html = "Ops, Not found the recipe!"
+    //             mealList.classList.add("notFound")
+    //         }
 
-            mealList.innerHTML = html
-        })
+    //         mealList.innerHTML = html
+    //     })
 }
 
 // load first recipes
-fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=`)
-    .then((response) => response.json())
-    .then((data) => {
-        let html = ""
-        if (data.meals) {
-            data.meals.forEach((meal) => {
-                html += `
-        <div class="meal-item">
-            <div class="meal-img" data-id="${meal.idMeal}">
-                <img src="${meal.strMealThumb}" alt="food" />
-            </div>
-            <div class="meal-name" data-id="${meal.idMeal}">
-                <h3>${meal.strMeal}</h3>
-                <a href="#" class="recipe-btn">Show Recipe</a>
-                <a href="#" class="recipe-btn-ingredient">Show ingredients</a>
+// fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=`)
+//     .then((response) => response.json())
+//     .then((data) => {
+//         let html = ""
+//         if (data.meals) {
+//             data.meals.forEach((meal) => {
+//                 html += `
+//         <div class="meal-item">
+//             <div class="meal-img" data-id="${meal.idMeal}">
+//                 <img src="${meal.strMealThumb}" alt="food" />
+//             </div>
+//             <div class="meal-name" data-id="${meal.idMeal}">
+//                 <h3>${meal.strMeal}</h3>
+//                 <a href="#" class="recipe-btn">Show Recipe</a>
+//                 <a href="#" class="recipe-btn-ingredient">Show ingredients</a>
 
-            </div>
-        </div>
-            `
-            })
-        }
-        mealList.innerHTML = html
-    })
+//             </div>
+//         </div>
+//             `
+//             })
+//         }
+//         mealList.innerHTML = html
+    // })
 
 // get recipes list when button is clicked
 function getMealList() {
-    let searchInputTxt = document.getElementById("search-input").value.trim()
+    let searchInputTxt = document.getElementById("inputText").value.trim()
     fetch(
         `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInputTxt}`
     )
@@ -94,22 +98,20 @@ function getMealList() {
             if (data.meals) {
                 data.meals.forEach((meal) => {
                     html += `
-            <div class="meal-item">
-                <div class="meal-img" data-id="${meal.idMeal}">
-                    <img src="${meal.strMealThumb}" alt="food" />
-                </div>
-                <div class="meal-name" data-id="${meal.idMeal}">
-                    <h3>${meal.strMeal}</h3>
-                    <a href="#" class="recipe-btn">Show recipe</a>
-                    <a href="#" class="recipe-btn-ingredient">Show ingredients</a>
-
-                </div>
-            </div>
-              `;
+                    <div class="col">
+                    <div class="card h-100 " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img src="${meal.strMealThumb}" class="card-img-top" alt="...">
+                        <div class="card-body" id="${meal.idMeal}">
+                            <h5 class="card-title text-center">${meal.strMeal}</h5>
+                            <a href="#" class="recipe-btn">Recipe</a>
+                            <a href="#" class="recipe-btn-ingredient">Ingredients</a>                             
+                        </div>
+                    </div>
+                    </div>`;
                 })
                 mealList.classList.remove("notFound")
             } else {
-                html = "Ops, Not found the recipe!"
+                html = "Ops, Recipe not found!"
                 mealList.classList.add("notFound")
             }
 
@@ -126,14 +128,14 @@ function getMealRecipe(e) {
     if (e.target.classList.contains("recipe-btn")) {
         let mealItem = e.target.parentElement
         fetch(
-            `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`
+            `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.id}`
         )
             .then((response) => response.json())
             .then((data) => mealRecipeModal(data.meals))
     } else if (e.target.classList.contains("recipe-btn-ingredient")) {
         let mealItem = e.target.parentElement
         fetch(
-            `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`
+            `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.id}`
         )
             .then((response) => response.json())
             .then((data) => mealIngredientsModal(data.meals))
@@ -145,18 +147,23 @@ function getMealRecipe(e) {
 function mealRecipeModal(meal) {
     meal = meal[0]
     let html = `
-    <h2 class="recipe-title">${meal.strMeal}</h2>
-    <p class="recipe-category">${meal.strCategory}</p>
-    <div class="recipe-instruct">
+    <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">${meal.strMeal}</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>    
+    <p class="recipe-category"><b>#${meal.strCategory}  #${meal.strArea}</b></p>
+    <div class="recipe-instruct" style="padding: 10px; max-height: 400px; overflow-y: scroll;">
         <h3>Instructions</h3>
-        <p>${meal.strInstructions}</p>
-    </div>
-    <div class="recipe-meal-img">
-        <img src="${meal.strMealThumb}" alt="" />
+        <p style="text-align: justify;">${meal.strInstructions}</p>
     </div>
     <div class="recipe-link">
-        <a href="${meal.strYoutube}" target="_blank">Assist video</a>
-    </div>  `
+        
+    </div>  
+    <div class="modal-footer">
+    <a href="${meal.strYoutube}" target="_blank"><img height="40px" src="img/yt.png"></a>
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    </div>    
+    `
 
     mealDetailsContent.innerHTML = html
     mealDetailsContent.parentElement.classList.add("showRecipe")
@@ -190,14 +197,57 @@ function mealIngredientsModal(meal) {
         i++
     }
     let html = `
-    <h2 class="recipe-title">${meal.strMeal}</h2>
+    <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">${meal.strMeal}</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>     
     <div class="recipe-ingredients">
         <h3>Ingredients</h3>
         <ul class="ingredients-list">
             ${ingredientsList.map((ingredient) => `<p>${ingredient}</p>`).join("")}
         </ul>
-    </div> `
+    </div>
+    </div>  
+    <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    </div>`
 
     mealDetailsContent.innerHTML = html
     mealDetailsContent.parentElement.classList.add("showRecipe")
+}
+
+//Detect when Enter key was pressed
+function EnterGo(e){
+    if (e.key === "Enter") { getMealList() }    
+}
+
+
+// get random recipe when button is clicked
+function getRandomMeal() {
+    fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
+        .then((response) => response.json())
+        .then((data) => {
+            let html = ""
+            if (data.meals) {
+                data.meals.forEach((meal) => {
+                    html += `
+                    <div class="col">
+                    <div  class="card h-100 " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img src="${meal.strMealThumb}" class="card-img-top" alt="...">
+                        <div class="card-body" id="${meal.idMeal}">
+                            <h5 class="card-title text-center">${meal.strMeal}</h5>
+                            <a href="#" class="recipe-btn">Recipe</a>
+                            <a href="#" class="recipe-btn-ingredient">Ingredients</a>                            
+                        </div>
+                    </div>
+                    </div>`;
+                })
+                mealList.classList.remove("notFound")
+            } else {
+                html = "Ops, Recipe not found!"
+                mealList.classList.add("notFound")
+            }
+
+            mealList.innerHTML = html
+        })
 }
