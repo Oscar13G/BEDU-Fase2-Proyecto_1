@@ -1,6 +1,6 @@
 <img src="https://d92mrp7hetgfk.cloudfront.net/images/sites/misc/bedulogo/original.png?1596745896" align="right" height="100" width="100" hspace="10">
 # Desarrollo Web Full Stack JavaScript
-Proyecto de JavaScript para consumir [FreeMealApi](https://www.themealdb.com/api.php) y mostrar los resultados en una pagina web; utilizando Webpack
+Proyecto de JavaScript para consumir [FreeMealApi](https://www.themealdb.com/api.php) y mostrar los resultados en una pagina web.
 
 ### *Integrantes*
 
