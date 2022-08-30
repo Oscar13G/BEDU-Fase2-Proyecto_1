@@ -14,7 +14,7 @@ random.addEventListener("click", getRandomMeal)
 // recipeCloseBtn.addEventListener("click", () => {
 //     mealDetailsContent.parentElement.classList.remove("showRecipe")
 // });
-// searchLetter.addEventListener("click", getMealByFirstLetter)
+searchLetter.addEventListener("click", getMealByFirstLetter)
 
 // Create Letter Menu
 let letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
@@ -27,38 +27,38 @@ for (let i = 0; i < letters.length; i++) {
     </button>
     `
 }
-//searchLetter.innerHTML = html;
+searchLetter.innerHTML = html;
 
 // Get Recipe List by First Letter
 function getMealByFirstLetter(e) {
-    // let mealLetter = e.target.dataset.id
-    // fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${mealLetter}`)
-    //     .then((response) => response.json())
-    //     .then((data) => {
-    //         let html = ""
-    //         if (data.meals) {
-    //             data.meals.forEach((meal) => {
-    //                 html += `
-    //         <div class="meal-item">
-    //             <div class="meal-img" data-id="${meal.idMeal}">
-    //                 <img src="${meal.strMealThumb}" alt="food" />
-    //             </div>
-    //             <div class="meal-name" data-id="${meal.idMeal}">
-    //                 <h3>${meal.strMeal}</h3>
-    //                 <a href="#" class="recipe-btn">Show Recipe</a>
-    //                 <a href="#" class="recipe-btn-ingredient">Show ingredients</a>
-    //             </div>
-    //         </div>
-    //           `
-    //             })
-    //             mealList.classList.remove("notFound")
-    //         } else {
-    //             html = "Ops, Not found the recipe!"
-    //             mealList.classList.add("notFound")
-    //         }
+    let mealLetter = e.target.dataset.id
+    fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${mealLetter}`)
+        .then((response) => response.json())
+        .then((data) => {
+            let html = ""
+            if (data.meals) {
+                data.meals.forEach((meal) => {
+                    html += `
+                    <div class="col">
+                    <div class="meal-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img src="${meal.strMealThumb}" class="card-img-top" alt="...">
+                        <div class="card-body" id="${meal.idMeal}">
+                            <h5 class="card-title text-center">${meal.strMeal}</h5>
+                            <a href="#" class="recipe-btn">Recipe</a>
+                            <a href="#" class="recipe-btn-ingredient">Ingredients</a>                             
+                        </div>
+                    </div>
+                    </div>`
+              
+                })
+                mealList.classList.remove("notFound")
+            } else {
+                html = "Ops, Not found the recipe!"
+                mealList.classList.add("notFound")
+            }
 
-    //         mealList.innerHTML = html
-    //     })
+            mealList.innerHTML = html
+        })
 }
 
 // load first recipes
@@ -99,7 +99,7 @@ function getMealList() {
                 data.meals.forEach((meal) => {
                     html += `
                     <div class="col">
-                    <div class="card h-100 " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div class="meal-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <img src="${meal.strMealThumb}" class="card-img-top" alt="...">
                         <div class="card-body" id="${meal.idMeal}">
                             <h5 class="card-title text-center">${meal.strMeal}</h5>
@@ -232,7 +232,7 @@ function getRandomMeal() {
                 data.meals.forEach((meal) => {
                     html += `
                     <div class="col">
-                    <div  class="card h-100 " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <div  class="meal-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         <img src="${meal.strMealThumb}" class="card-img-top" alt="...">
                         <div class="card-body" id="${meal.idMeal}">
                             <h5 class="card-title text-center">${meal.strMeal}</h5>

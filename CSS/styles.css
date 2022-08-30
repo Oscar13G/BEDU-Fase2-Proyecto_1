@@ -1,3 +1,10 @@
+
+:root {
+  --principal: #f58f01;
+  --principal-dark: #4067fa;
+  --principal-third: #f58f01;
+}
+
 #title {
   text-align: left;
   font-size: 50px;
@@ -12,4 +19,73 @@
     margin-top: 10px;
     padding-bottom: 100px;
     margin-bottom: 50px;
+}
+
+/*Letters*/
+
+.letter-btn {
+  font-family: inherit;
+  cursor: pointer;
+  margin: 2px;
+  outline: 0;
+  font-size: 1rem;
+}
+
+
+.meal-letter-box {
+  margin: 1.2rem 0;
+  display: flex;
+  align-items: stretch;
+}
+
+.search-btn,
+.search-letter {
+  width: 100%;
+}
+
+
+.search-letter-btn {
+  width: 50px;
+  height: 50px;
+  font-size: 1.4rem;
+  color: var(--principal);
+  border: none;
+  border-radius: 2rem;
+  transition: all 0.1s linear;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -ms-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+}
+
+.search-letter-btn:hover {
+  background: var(--principal-third);
+  color: #fff;
+}
+
+.notFound {
+  text-align: center;
+  padding: 2rem;
+  grid-template-columns: 1fr !important;
+  color: var(--principal-dark);
+  font-size: 1.8rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.meal-item {
+  border-radius: 1rem;
+  -webkit-transition: 1rem;
+  -moz-transition: 1rem;
+  -ms-transition: 1rem;
+  -o-transition: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+  margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .search-letter-btn {
+    display: none;
+  }
 }
