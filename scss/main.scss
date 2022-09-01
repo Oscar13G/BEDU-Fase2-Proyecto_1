@@ -1,0 +1,134 @@
+$font_title: "Montserrat", sans-serif;
+$font_text: "Roboto", sans-serif;
+h1 {
+  font-size: 60px;
+  color: #025157;
+  text-align: center;
+}
+.meal-banner {
+  background-image: url("../img/bannerexample.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  width: 100%;
+  opacity: 0.85;
+  z-index: -1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.banner-title h2 {
+  font-size: 60px;
+  color: white;
+  font-weight: bold;
+  font-family: $font_title;
+  opacity: 1.2;
+}
+.banner-input {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.banner-input input[type="text"] {
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  height: 50px;
+  width: 300px;
+  padding-left: 15px;
+  font-size: 30px;
+}
+.banner-buttons {
+  display: inline-block;
+}
+.banner-buttons button {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  border-radius: 25px;
+  height: 50px;
+  width: 150px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  padding: 5px 5px;
+  border-color: white;
+  &:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+  }
+}
+#mainContent {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.card-meal {
+  .card-body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h5 {
+      font-family: $font_title;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .card-btn {
+      width: 100%;
+      a {
+        background-color: #ffba08;
+        color: #03071e;
+        font-family: $font_title;
+        font-weight: bold;
+        width: 100%;
+      }
+    }
+  }
+  &:hover {
+    transform: scale(1.2) 1s linear;
+    box-shadow: -3px 20px 40px 1px rgba(0, 0, 0, 0.56);
+    -webkit-box-shadow: -3px 20px 40px 1px rgba(0, 0, 0, 0.56);
+    -moz-box-shadow: -3px 20px 40px 1px rgba(0, 0, 0, 0.56);
+  }
+}
+footer {
+  width: 100%;
+  background-color: #03071e;
+  color: white;
+  position: absolute;
+  .footer-container {
+    width: 100%;
+    height: 100%;
+    .footer-col {
+      height: 100%;
+      .footer-img {
+        height: 100%;
+        width: 100%;
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  footer {
+    background-color: #03071e;
+    color: white;
+    position: absolute;
+    .footer-container {
+      width: 100%;
+      height: 100%;
+      .footer-col {
+        height: 100%;
+        .footer-img {
+          height: 100%;
+          width: 100%;
+          img {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
