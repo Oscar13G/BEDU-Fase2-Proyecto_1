@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Nombre Pendiente -->
-    <title>Document</title>
+    <title>Meals</title>
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,9 +23,9 @@
         <!-- class="navbar navbar-expand-md navbar-light fixed-top" >>> bloquar barra sup -->
         <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #d4791f;">
             <div class="container-fluid">
-                <a class="navbar-brand" href="/index.html">
+                <a class="navbar-brand" href="/index.html" data-bs-toggle="tooltip" data-bs-placement="top" title="Home" >
                     <!-- boton home -->
-                    <img src="../img/house-door-fill.svg" alt="home" width="30" height="24">
+                    <img src="../img/house-door-fill.svg" alt="house-door-fill" width="30" height="24">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -37,21 +36,21 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="referencias.html">Referencias</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                            <a class="nav-link active" aria-current="page" href="/aboutUs.html">About Us</a>
                         </li>
                     </ul>
                     <!-- iconos -->
-                    <a class="navbar-brand" href="https://www.themealdb.com/api.php" target="_blank">
+                    <a class="navbar-brand" href="https://www.themealdb.com/api.php" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="API">
                         <img src="img/cup-hot-fill.svg" alt="foodapi" width="30" height="24">
                     </a>
-                    <a class="navbar-brand" href="https://github.com/Oscar13G" target="_blank">
+                    <a class="navbar-brand" href="https://github.com/Oscar13G/BEDU-Fase2-Proyecto_1" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="GitHub" >
                         <img src="img/git-fill.svg" alt="github" width="30" height="24">
                     </a>
-                    <a class="navbar-brand" href="https://getbootstrap.com/" target="_blank">
+                    <a class="navbar-brand" href="https://getbootstrap.com/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" title="Bootstrap">
                         <img src="img/bootstrap-fill.svg" alt="bootstrap" width="30" height="24">
                     </a>
                 </div>
@@ -64,20 +63,30 @@
         <!-- title -->
         <h1 id="title">Recipe<br>Search</h1>
         <!-- Barra de busqueda -->
-        <div id="Barra" class="d-flex justify-content-center px-5 mx-5">
+        <div id="search" class="d-flex justify-content-center px-5 mx-5">
             <input id="inputText" class="form-control" type="text" placeholder="Search" aria-label="">
-            <button class="btn btn-info" type="button" id="search-btn">
+
+            <button class="btn btn-info" type="button" id="searchBtn" data-bs-toggle="tooltip" data-bs-placement="top" title="Search">
+
                 <div class="d-flex justify-content-center align-items-center">
                     <img src="./img/search.svg" alt="search">
                 </div>
             </button>
-            <button class="btn btn-warning " type="button" id="random">
+
+            <button class="btn btn-warning " type="button" id="randomBtn" data-bs-toggle="tooltip" data-bs-placement="top" title="Random">
+
                 <div class="d-flex justify-content-center align-items-center">
                     <img src="./img/shuffle.svg" alt="search">
                 </div>
             </button>
         </div>
     </div>
+
+
+    <!-- Resultados -->
+    <div class="container pb-4 mb-4">
+        <h2 id="titleListMeals"></h2>
+        <div id="listMeals" class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
@@ -98,20 +107,20 @@
         </div>
     </div>
 
-    <!-- Resultados -->
-    <div class="container" style="display: block;">
-        <h4> Dar click en los Resultados</h4>
-        <div id="meal" class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
-
         </div>
     </div>
-    <!-- Pruebas -->
+
+    <!-- Modals -->
+    <div class="container" id="listModal"></div>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
         </script>
-    <script src="JS/script.js"></script>   
+
+    <!-- JS -->
+    <script src="JS/index.js"></script>
+
 </body>
 
 </html>
