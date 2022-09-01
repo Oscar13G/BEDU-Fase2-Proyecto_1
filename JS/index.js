@@ -7,11 +7,13 @@ let input;
 const divList = document.getElementById("listMeals");
 const listModal = document.getElementById("listModal");
 
+// Funcion API random
 function getMealRandom() {
   return fetch("https://themealdb.com/api/json/v1/1/random.php").then(
     (response) => response.json()
   );
 }
+// Funcion API search
 function getMealMach(value) {
   if (value !== "") {
     return fetch(
@@ -59,7 +61,6 @@ function processSearch() {
 
 // Funcion para construir lista de modals
 function buildListModal(data) {
-  // console.log(Array.from(data.meals));
 
   Array.from(data.meals).forEach((meal) => {
     let divFade = document.createElement("div");
@@ -101,7 +102,7 @@ function buildListModal(data) {
     listIngredient.className = "list-group list-group-flush";
     ingredientTitle.textContent = "Ingredients";
     listIngredient.appendChild(ingredientTitle);
-    //funcion ingredientes
+    //  Ciclo ingredientes
     for (let i = 1; i <= 20 ; i++) {
       let ingredient = document.createElement("li");
 
@@ -113,10 +114,8 @@ function buildListModal(data) {
       }
     }
     instructionsTitle.textContent = "Instructions";
-    
     instructionsTitle.id = "instructionsTitle";
-    // console.log(`Para ${meal.strMeal} el valor es: ${!!meal.strYoutube}`);
-    //  valida si tiene un link a yuotube
+    //  valida si tiene un link a youtube
     if (!!meal.strYoutube) {
       let linkYoutube = document.createElement("a");
       let imgYoutube = document.createElement("img");
@@ -135,7 +134,6 @@ function buildListModal(data) {
     }
     instructionsBody.className = "lh-lg";
     instructionsBody.id = "instructionBody";
-    
     instructionsBody.innerHTML = `${meal.strInstructions
       .replaceAll('\r\n', '<br>')}`;
     divFooter.className = "modal-footer";
@@ -143,11 +141,6 @@ function buildListModal(data) {
     buttonCloseFooter.type = "button";
     buttonCloseFooter.setAttribute("data-bs-dismiss","modal");
     buttonCloseFooter.textContent = "Close";
-
-
-    // 
-    // console.log(meal.strInstructions);
-
 
     listModal.appendChild(divFade);
     divFade.appendChild(divDialog);
@@ -159,7 +152,6 @@ function buildListModal(data) {
     divBody.appendChild(divRow);
     divRow.appendChild(imgModal);
     divRow.appendChild(listIngredient);
-    
     divBody.appendChild(instructionsTitle);
     divBody.appendChild(instructionsBody);
     divContent.appendChild(divFooter);
