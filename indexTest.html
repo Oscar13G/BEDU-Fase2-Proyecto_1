@@ -18,11 +18,24 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="CSS/output.css" />
+    <script
+      src="https://kit.fontawesome.com/5a28241b06.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <nav class="fixed-top navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg fixed-top bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">
+          <img
+            src="img/logo.png"
+            alt=""
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top"
+          />
+          Bootstrap
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -35,48 +48,18 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+              <a class="nav-link" aria-current="page" href="#"
+                ><i class="fa-sharp fa-solid fa-house"></i> Inicio</a
               >
-                Dropdown
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                  <a class="dropdown-item" href="#">Something else here</a>
-                </li>
-              </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
+              <a class="nav-link" href="#"
+                ><i class="fa-solid fa-user"></i> Acerca de nosotros.</a
+              >
             </li>
           </ul>
-          <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>
@@ -129,19 +112,31 @@
         </div>
       </div>
     </main>
-    <footer class="footer">
-      <div class="container row footer-container">
-        <div class="col-12 col-md-6 footer-col">
-          <div class="footer-img">
-            <img class="img-fluid" src="img/logo.png" alt="" />
+    <div class="mt-5 pt-5 pb-5 footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-xs-12 info-container">
+            <h2>Berercolsol</h2>
+            <img src="img/logo.png" alt="" />
+            <p>
+              <a href="#"><i class="fa fa-facebook-square mr-1"></i></a
+              ><a href="#"><i class="fa fa-linkedin-square"></i></a>
+            </p>
           </div>
-          <div class="h6">Pastes el berrerColsol</div>
-        </div>
-        <div class="col-12 col-md-6 footer-col">
-          Aqui va ir pues info de contacto y mamadas asi
+          <div class="col-lg-3 col-xs-12 links">
+            <h2>Links</h2>
+            <ul class="m-0 p-0">
+              <li><a href="#">Acerca de nosotros.</a></li>
+              <li><a href="#">The MealBD API</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-xs-12 redes">
+            <h2>Redes</h2>
+            <div class="redes-container"></div>
+          </div>
         </div>
       </div>
-    </footer>
+    </div>
     <script type="text/javascript" src="JS/test.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
