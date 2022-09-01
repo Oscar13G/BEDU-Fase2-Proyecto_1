@@ -4,15 +4,15 @@ Proyecto de JavaScript para consumir [FreeMealApi](https://www.themealdb.com/api
 
 ### *Integrantes*
 
-* Axel Padilla[![Web](https://img.shields.io/badge/GitHub-olvera93-14a1f0?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://github.com/Axel-Padilla)<br>
+* Axel Padilla[![Web](https://img.shields.io/badge/GitHub-Axel_Padilla-14a1f0?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://github.com/Axel-Padilla)<br>
 
-* Emanuel Alamilla [![Web](https://img.shields.io/badge/GitHub-daviders98-14a1f0?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://github.com/Changaloco)<br>
+* Emanuel Alamilla [![Web](https://img.shields.io/badge/GitHub-Changaloco-14a1f0?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://github.com/Changaloco)<br>
 
-* Gonzalo Olvera[![Web](https://img.shields.io/badge/GitHub-mibarra24-14a1f0?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://github.com/olvera93)<br>
+* Gonzalo Olvera[![Web](https://img.shields.io/badge/GitHub-olvera93-14a1f0?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://github.com/olvera93)<br>
 
-* Jorge Lopez[![Web](https://img.shields.io/badge/GitHub-StuartGa-14a1f0?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://github.com/Jorg3Lop3z)
+* Jorge Lopez[![Web](https://img.shields.io/badge/GitHub-Jorg3Lop3z-14a1f0?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://github.com/Jorg3Lop3z)
 
-* Oscar Jaime [![Web](https://img.shields.io/badge/GitHub-olvera93-14a1f0?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://github.com/Oscar13G)<br>
+* Oscar Jaime [![Web](https://img.shields.io/badge/GitHub-Oscar13G-14a1f0?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://github.com/Oscar13G)<br>
 
 <p><br /> &copy; Equipo 19 - Desarrollo Web - Santander - 2022
 
