@@ -192,7 +192,9 @@ function mealIngredientsModal(meal) {
     let i = 0
     while (i < 20) {
         if (ingredients[i] !== undefined && measurements[i] !== undefined) {
-            ingredientsList.push(`${ingredients[i]} - ${measurements[i]}`)
+            ingredientsList.push(`
+            <img height="20px" src="https://www.themealdb.com/images/ingredients/${ingredients[i]}-Small.png">
+            ${ingredients[i]} - ${measurements[i]}`)
         }
         i++
     }

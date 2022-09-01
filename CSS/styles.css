@@ -16,6 +16,29 @@ body {
     padding-bottom: 100px;
     margin-bottom: 50px;
 }
+
 #instructionBody{
   text-align: justify;
+}
+
+
+
+
+.card-img-top{
+    filter: sepia(100%) brightness(60%);
+}
+
+.card-img-top:hover{
+  filter: none;
+}
+
+div.card:hover{
+  color: rgb(227, 120, 20);
+  box-shadow: 0 10px 15px rgba(243, 240, 66, 0.479);
+  cursor: pointer;
+  border: solid orange;
+}
+
+img.float-start {
+  max-height: 400px;
 }

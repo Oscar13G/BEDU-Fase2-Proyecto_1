@@ -78,6 +78,7 @@ function buildListModal(data) {
     let instructionsBody = document.createElement("p");
     let divFooter = document.createElement("div");
     let buttonCloseFooter = document.createElement("button");
+    
 
     divFade.className = "modal fade";
     divFade.id = `Modal${meal.idMeal}`;
@@ -108,8 +109,9 @@ function buildListModal(data) {
 
       ingredient.className = "list-group-item";
       if (!!meal[`strIngredient${i}`]) {
-        ingredient.textContent = 
-        `${meal[`strIngredient${i}`]}: ${meal[`strMeasure${i}`]}`;
+        ingredient.innerHTML= 
+        `<img height="20px" src="https://www.themealdb.com/images/ingredients/${meal[`strIngredient${i}`]}-Small.png">
+        ${meal[`strIngredient${i}`]}: ${meal[`strMeasure${i}`]}`;
         listIngredient.appendChild(ingredient);
       }
     }
