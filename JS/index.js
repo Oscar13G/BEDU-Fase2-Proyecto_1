@@ -161,7 +161,6 @@ function buildListModal(data) {
 
 // Funcion para construir lista de resultados
 function buildListMeals(data) {
-  //   console.log(Array.from(data.meals));
 
   Array.from(data.meals).forEach((meal) => {
     let divCol = document.createElement("div");
