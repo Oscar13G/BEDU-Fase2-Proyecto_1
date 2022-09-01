@@ -113,6 +113,7 @@ function buildListModal(data) {
       }
     }
     instructionsTitle.textContent = "Instructions";
+    
     instructionsTitle.id = "instructionsTitle";
     // console.log(`Para ${meal.strMeal} el valor es: ${!!meal.strYoutube}`);
     //  valida si tiene un link a yuotube
@@ -122,6 +123,10 @@ function buildListModal(data) {
       
       linkYoutube.href = `${meal.strYoutube}`;
       linkYoutube.target = "_blank";
+      // data-bs-toggle="tooltip" data-bs-placement="top" title="API"
+      imgYoutube.setAttribute("data-bs-toggle", "tooltip");
+      imgYoutube.setAttribute("data-bs-placement", "top");
+      imgYoutube.setAttribute("title", "Youtube");
       imgYoutube.src = "img/youtube.svg";
       imgYoutube.width = "40";
       imgYoutube.height = "34";
