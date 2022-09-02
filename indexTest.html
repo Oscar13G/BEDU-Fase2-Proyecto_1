@@ -73,13 +73,16 @@
         <h2>Quieres una nueva receta?</h2>
       </div>
       <div class="banner-input">
-        <input type="text" />
+        <input id="searchInput" type="text" />
       </div>
       <div class="row banner-buttons text-center">
-        <div class="col-12 col-md-6 mb-xs-20 btn-banner-container">
+        <div
+          id="searchBtn"
+          class="col-12 col-md-6 mb-xs-20 btn-banner-container"
+        >
           <button>Buscar</button>
         </div>
-        <div class="col-12 col-md-6 btn-banner-container">
+        <div id="randomBtn" class="col-12 col-md-6 btn-banner-container">
           <button>Sorprendeme!</button>
         </div>
       </div>
@@ -93,21 +96,7 @@
       >
         Launch demo modal
       </button>
-      <div class="row justify-content-center">
-        <div
-          class="col-12 col-md-4 mx-auto d-flex justify-content-center card-container"
-        >
-          <div class="card card-meal" style="width: 18rem">
-            <img src="img/pizza.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Pizza Planeta</h5>
-              <div class="card-btn">
-                <a href="#" class="btn">Ver receta</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div id="recipeContainer" class="row justify-content-center"></div>
     </main>
     <div class="mt-5 pt-5 pb-5 footer">
       <div class="container">
@@ -192,7 +181,24 @@
                         data-bs-parent="#accordionFlushExample"
                       >
                         <div class="accordion-body">
-                          Aqui deben ir los ingredientes
+                          <div class="card-ingrediente">
+                            <div class="row">
+                              <div
+                                class="col-2 d-flex justify-content-center align-items-center"
+                              >
+                                <img
+                                  src="img/pizza.jpg"
+                                  class="img-fluid"
+                                  alt=""
+                                />
+                              </div>
+                              <div class="col-10 ingredient-info">
+                                <h5>Ingrediente: <span>Queso</span></h5>
+                                <h5>Cantidad: <span>3px</span></h5>
+                              </div>
+                            </div>
+                            <hr />
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -202,6 +208,9 @@
             </div>
             <div class="instruc-general-recipe">
               <h5 class="text-center">Instrucciones</h5>
+              <a href=""
+                ><h5><i class="fa fa-youtube"></i></h5
+              ></a>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
                 culpa tempora sequi explicabo ad, illum sint neque optio
@@ -232,5 +241,6 @@
       integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
       crossorigin="anonymous"
     ></script>
+    <script type="module" src="js/index.js"></script>
   </body>
 </html>

@@ -257,6 +257,13 @@
 .instruc-general-recipe {
   margin-top: 20px;
 }
+.instruc-general-recipe a {
+  text-decoration: none;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
 .instruc-general-recipe h5 {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -264,6 +271,15 @@
 }
 .instruc-general-recipe p {
   font-family: "Roboto", sans-serif;
+}
+
+.ingredient-info h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+.ingredient-info h5 span {
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
 }
 
 /*# sourceMappingURL=output.css.map */

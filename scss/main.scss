@@ -252,6 +252,13 @@ $hover: #d00000;
 
 .instruc-general-recipe {
   margin-top: 20px;
+  a {
+    text-decoration: none;
+    text-align: center;
+    font-family: $font_title;
+    font-weight: bold;
+    font-size: 30px;
+  }
   h5 {
     font-family: $font_title;
     font-weight: bold;
@@ -259,5 +266,15 @@ $hover: #d00000;
   }
   p {
     font-family: $font_text;
+  }
+}
+.ingredient-info {
+  h5 {
+    font-family: $font_title;
+    font-weight: bold;
+    span {
+      font-family: $font_text;
+      font-weight: normal;
+    }
   }
 }
