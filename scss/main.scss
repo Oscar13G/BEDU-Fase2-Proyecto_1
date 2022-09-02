@@ -1,17 +1,15 @@
 $font_title: "Montserrat", sans-serif;
 $font_text: "Roboto", sans-serif;
-h1 {
-  font-size: 60px;
-  color: #025157;
-  text-align: center;
-}
+$primary: #03071e;
+$contrast: #ffba08;
+$hover: #d00000;
+
 .meal-banner {
   background-image: url("../img/bannerexample.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 700px;
   width: 100%;
-  opacity: 0.85;
   z-index: -1;
   overflow: hidden;
   display: flex;
@@ -39,24 +37,22 @@ h1 {
   padding-left: 15px;
   font-size: 30px;
 }
-.banner-buttons {
-  display: inline-block;
-}
 .banner-buttons button {
+  width: 100%;
   text-decoration: none;
-  color: white;
-  background-color: black;
+  color: $contrast;
+  background-color: $primary;
   border-radius: 25px;
   height: 50px;
   width: 150px;
   font-family: "Montserrat";
   font-weight: 700;
   padding: 5px 5px;
-  border-color: white;
+  border-color: $contrast;
   &:hover {
-    background-color: white;
-    color: black;
-    border-color: black;
+    background-color: $contrast;
+    color: $primary;
+    border-color: $primary;
   }
 }
 #mainContent {
@@ -76,8 +72,8 @@ h1 {
     .card-btn {
       width: 100%;
       a {
-        background-color: #ffba08;
-        color: #03071e;
+        background-color: $primary;
+        color: $contrast;
         font-family: $font_title;
         font-weight: bold;
         width: 100%;
@@ -93,9 +89,12 @@ h1 {
 }
 
 .footer {
-  background: #152f4f;
-  color: white;
-
+  background: $primary;
+  color: $contrast;
+  h2 {
+    font-family: $font_title;
+    font-weight: bold;
+  }
   .links {
     display: flex;
     flex-direction: column;
@@ -104,11 +103,13 @@ h1 {
       list-style-type: none;
     }
     li a {
-      color: white;
+      color: $contrast;
+      text-decoration: none;
+      font-family: $font_title;
       transition: color 0.2s;
       &:hover {
         text-decoration: none;
-        color: #4180cb;
+        color: $hover;
       }
     }
     margin-bottom: 20px;
@@ -122,10 +123,11 @@ h1 {
       font-size: 25px;
     }
     a {
-      color: white;
+      color: $contrast;
+      font-family: $font_text;
       transition: color 0.2s;
       &:hover {
-        color: #4180cb;
+        color: $hover;
       }
     }
     img {
@@ -138,8 +140,47 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    i {
+    a {
       font-size: 18px;
     }
+    .redes-container {
+      a {
+        text-decoration: none;
+        font-family: $font_text;
+        color: $contrast;
+        &:hover {
+          color: $hover;
+        }
+      }
+    }
   }
+}
+.navbar {
+  background-color: $primary;
+  a {
+    color: $contrast;
+    &:hover {
+      color: $hover;
+    }
+  }
+}
+.navbar-toggler {
+  border-color: $contrast;
+  .icon-navbar {
+    color: $contrast;
+    font-size: 28px;
+  }
+}
+.card-container {
+  margin-bottom: 20px;
+}
+.navbar-nav li {
+  float: none;
+  display: inline-block;
+  vertical-align: bottom;
+  font-family: $font_title;
+}
+.navbar-brand {
+  font-family: $font_title;
+  font-weight: bold;
 }

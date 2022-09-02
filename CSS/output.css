@@ -1,16 +1,9 @@
-h1 {
-  font-size: 60px;
-  color: #025157;
-  text-align: center;
-}
-
 .meal-banner {
   background-image: url("../img/bannerexample.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 700px;
   width: 100%;
-  opacity: 0.85;
   z-index: -1;
   overflow: hidden;
   display: flex;
@@ -42,26 +35,23 @@ h1 {
   font-size: 30px;
 }
 
-.banner-buttons {
-  display: inline-block;
-}
-
 .banner-buttons button {
+  width: 100%;
   text-decoration: none;
-  color: white;
-  background-color: black;
+  color: #ffba08;
+  background-color: #03071e;
   border-radius: 25px;
   height: 50px;
   width: 150px;
   font-family: "Montserrat";
   font-weight: 700;
   padding: 5px 5px;
-  border-color: white;
+  border-color: #ffba08;
 }
 .banner-buttons button:hover {
-  background-color: white;
-  color: black;
-  border-color: black;
+  background-color: #ffba08;
+  color: #03071e;
+  border-color: #03071e;
 }
 
 #mainContent {
@@ -83,8 +73,8 @@ h1 {
   width: 100%;
 }
 .card-meal .card-body .card-btn a {
-  background-color: #ffba08;
-  color: #03071e;
+  background-color: #03071e;
+  color: #ffba08;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   width: 100%;
@@ -97,8 +87,12 @@ h1 {
 }
 
 .footer {
-  background: #152f4f;
-  color: white;
+  background: #03071e;
+  color: #ffba08;
+}
+.footer h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 .footer .links {
   display: flex;
@@ -110,12 +104,14 @@ h1 {
   list-style-type: none;
 }
 .footer .links li a {
-  color: white;
+  color: #ffba08;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
   transition: color 0.2s;
 }
 .footer .links li a:hover {
   text-decoration: none;
-  color: #4180cb;
+  color: #d00000;
 }
 .footer .info-container {
   display: flex;
@@ -127,11 +123,12 @@ h1 {
   font-size: 25px;
 }
 .footer .info-container a {
-  color: white;
+  color: #ffba08;
+  font-family: "Roboto", sans-serif;
   transition: color 0.2s;
 }
 .footer .info-container a:hover {
-  color: #4180cb;
+  color: #d00000;
 }
 .footer .info-container img {
   width: auto;
@@ -143,8 +140,50 @@ h1 {
   flex-direction: column;
   align-items: center;
 }
-.footer .redes i {
+.footer .redes a {
   font-size: 18px;
+}
+.footer .redes .redes-container a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: #ffba08;
+}
+.footer .redes .redes-container a:hover {
+  color: #d00000;
+}
+
+.navbar {
+  background-color: #03071e;
+}
+.navbar a {
+  color: #ffba08;
+}
+.navbar a:hover {
+  color: #d00000;
+}
+
+.navbar-toggler {
+  border-color: #ffba08;
+}
+.navbar-toggler .icon-navbar {
+  color: #ffba08;
+  font-size: 28px;
+}
+
+.card-container {
+  margin-bottom: 20px;
+}
+
+.navbar-nav li {
+  float: none;
+  display: inline-block;
+  vertical-align: bottom;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar-brand {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=output.css.map */
