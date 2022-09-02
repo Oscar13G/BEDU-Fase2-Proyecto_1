@@ -110,7 +110,7 @@ function buildListModal(data) {
       ingredient.className = "list-group-item";
       if (!!meal[`strIngredient${i}`]) {
         ingredient.innerHTML= 
-        `<img height="20px" src="https://www.themealdb.com/images/ingredients/${meal[`strIngredient${i}`]}-Small.png">
+        `<img height="40px" src="https://www.themealdb.com/images/ingredients/${meal[`strIngredient${i}`]}-Small.png">
         ${meal[`strIngredient${i}`]}: ${meal[`strMeasure${i}`]}`;
         listIngredient.appendChild(ingredient);
       }
@@ -159,6 +159,8 @@ function buildListModal(data) {
     divContent.appendChild(divFooter);
     divFooter.appendChild(buttonCloseFooter);
   });
+console.log(listModal);
+
 };
 
 // Funcion para construir lista de resultados
