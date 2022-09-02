@@ -215,4 +215,55 @@
   text-align: center;
 }
 
+.user-card-col {
+  margin-bottom: 20px;
+}
+.user-card-col .user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.user-card-col .user-info h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
+.user-card-col .user-info a {
+  background-color: #03071e;
+  color: #ffba08;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.modal-header {
+  background-color: #ffba08;
+  color: #03071e;
+}
+.modal-header h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.accordion-header button {
+  background-color: #03071e;
+  color: #ffba08;
+}
+
+.instruc-general-recipe {
+  margin-top: 20px;
+}
+.instruc-general-recipe h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+.instruc-general-recipe p {
+  font-family: "Roboto", sans-serif;
+}
+
 /*# sourceMappingURL=output.css.map */

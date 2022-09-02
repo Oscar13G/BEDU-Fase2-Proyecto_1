@@ -210,3 +210,54 @@ $hover: #d00000;
     text-align: center;
   }
 }
+
+.user-card-col {
+  margin-bottom: 20px;
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h5 {
+      font-family: $font_title;
+      font-weight: bold;
+      font-size: 25px;
+    }
+    a {
+      background-color: $primary;
+      color: $contrast;
+      font-family: $font_title;
+      font-size: 20px;
+      font-weight: bold;
+      width: 100%;
+    }
+  }
+}
+.modal-header {
+  background-color: $contrast;
+  color: $primary;
+  h5 {
+    font-family: $font_title;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+.accordion-header {
+  button {
+    background-color: $primary;
+    color: $contrast;
+  }
+}
+
+.instruc-general-recipe {
+  margin-top: 20px;
+  h5 {
+    font-family: $font_title;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  p {
+    font-family: $font_text;
+  }
+}

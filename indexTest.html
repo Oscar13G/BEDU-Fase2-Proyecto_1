@@ -85,72 +85,15 @@
       </div>
     </div>
     <main id="mainContent" class="container">
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Launch demo modal
+      </button>
       <div class="row justify-content-center">
-        <div
-          class="col-12 col-md-4 mx-auto d-flex justify-content-center card-container"
-        >
-          <div class="card card-meal" style="width: 18rem">
-            <img src="img/pizza.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Pizza Planeta</h5>
-              <div class="card-btn">
-                <a href="#" class="btn">Ver receta</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-md-4 mx-auto d-flex justify-content-center card-container"
-        >
-          <div class="card card-meal" style="width: 18rem">
-            <img src="img/pizza.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Pizza Planeta</h5>
-              <div class="card-btn">
-                <a href="#" class="btn">Ver receta</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-md-4 mx-auto d-flex justify-content-center card-container"
-        >
-          <div class="card card-meal" style="width: 18rem">
-            <img src="img/pizza.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Pizza Planeta</h5>
-              <div class="card-btn">
-                <a href="#" class="btn">Ver receta</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-md-4 mx-auto d-flex justify-content-center card-container"
-        >
-          <div class="card card-meal" style="width: 18rem">
-            <img src="img/pizza.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Pizza Planeta</h5>
-              <div class="card-btn">
-                <a href="#" class="btn">Ver receta</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="col-12 col-md-4 mx-auto d-flex justify-content-center card-container"
-        >
-          <div class="card card-meal" style="width: 18rem">
-            <img src="img/pizza.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Pizza Planeta</h5>
-              <div class="card-btn">
-                <a href="#" class="btn">Ver receta</a>
-              </div>
-            </div>
-          </div>
-        </div>
         <div
           class="col-12 col-md-4 mx-auto d-flex justify-content-center card-container"
         >
@@ -200,7 +143,85 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="JS/test.js"></script>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Arroz con pollo</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="info-general-recipe">
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <img src="img/bannerexample.png" class="img-fluid" alt="" />
+                </div>
+                <div class="col-12 col-md-6">
+                  <div
+                    class="accordion accordion-flush"
+                    id="accordionFlushExample"
+                  >
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="flush-headingOne">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#flush-collapseOne"
+                          aria-expanded="false"
+                          aria-controls="flush-collapseOne"
+                        >
+                          Lista de ingredientes
+                        </button>
+                      </h2>
+                      <div
+                        id="flush-collapseOne"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample"
+                      >
+                        <div class="accordion-body">
+                          Aqui deben ir los ingredientes
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="instruc-general-recipe">
+              <h5 class="text-center">Instrucciones</h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima,
+                culpa tempora sequi explicabo ad, illum sint neque optio
+                obcaecati accusamus dolorum eum laboriosam quisquam quo
+                deserunt. Mollitia ipsa omnis et.
+              </p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
       integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
