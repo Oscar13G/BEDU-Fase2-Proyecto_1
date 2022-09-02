@@ -190,4 +190,29 @@
   margin-top: 100px;
 }
 
+.container-info-web {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container-desc-web {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container-desc-web h3 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.container-desc-web p {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  text-align: center;
+}
+
 /*# sourceMappingURL=output.css.map */
