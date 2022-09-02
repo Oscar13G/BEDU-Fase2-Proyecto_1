@@ -43,6 +43,45 @@ document.addEventListener("click", function (e) {
       document.getElementById("modal-title").innerHTML = data.strMeal;
       document.getElementById("imgMeal").src = data.strMealThumb;
       document.getElementById("mealVideo").href = data.strYoutube;
+      document.getElementById("ingredientList").innerHTML = "";
+      for (let i = 1; i < 20; i++) {
+        let actual = "strIngredient" + i;
+        let actualQuantity = "strMeasure" + i;
+        const ingredientName = data[actual];
+        if (ingredientName != null && ingredientName != "") {
+          const ingredientQuantity = data[actualQuantity];
+          let ingCard = document.createElement("div");
+          ingCard.classList.add("card-ingrediente");
+          let row = document.createElement("div");
+          row.classList.add("row");
+          let imgCol = document.createElement("div");
+          imgCol.classList.add(
+            "col-2",
+            "d-flex",
+            "justify-content-center",
+            "align-items-center"
+          );
+          let img = document.createElement("img");
+          img.src = "a";
+          img.classList.add("img-fluid");
+          imgCol.appendChild(img);
+          let infoCol = document.createElement("div");
+          infoCol.classList.add("col-10", "ingredient-info");
+          infoCol.innerHTML =
+            "<h5>Ingrediente: <span>" +
+            ingredientName +
+            "</span></h5>" +
+            "<h5>Cantidad: <span>" +
+            ingredientQuantity +
+            "</span></h5>";
+          row.append(imgCol);
+          row.append(infoCol);
+          ingCard.append(row);
+          document.getElementById("ingredientList").append(ingCard);
+        } else {
+          break;
+        }
+      }
     });
   }
 });
