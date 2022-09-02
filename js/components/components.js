@@ -1,5 +1,4 @@
 function buildRecipeCard(data) {
-  console.log(data);
   const card = document.createElement("div");
   const nombreReceta = data.strMeal;
   card.classList.add(

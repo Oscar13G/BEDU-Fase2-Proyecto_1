@@ -26,18 +26,23 @@ document.querySelector("#randomBtn").addEventListener("click", function (e) {
   cleanRecipes();
   getMealRandom().then(function (data) {
     const card = buildRecipeCard(data.meals[0]);
-    card.addEventListener("click", function (e) {
-      setModalData(e);
-    });
     document.getElementById("recipeContainer").append(card);
   });
   e.preventDefault();
 });
 
-function setModalData(e) {
-  const id_meal = e.target.getAttribute("idMeal");
-  getMealDetails(id_meal).then(function (data) {
-    console.log(data);
-  });
-  console.log(id_meal);
-}
+document.addEventListener("click", function (e) {
+  if (e.target.classList.contains("btnMealDetails")) {
+    const id_meal = e.target.getAttribute("idMeal");
+    getMealDetails(id_meal).then(function (data) {
+      data = data.meals[0];
+      console.log(data);
+
+      document.getElementById("text-instrucciones").innerHTML =
+        data.strInstructions;
+      document.getElementById("modal-title").innerHTML = data.strMeal;
+      document.getElementById("imgMeal").src = data.strMealThumb;
+      document.getElementById("mealVideo").href = data.strYoutube;
+    });
+  }
+});
