@@ -88,14 +88,6 @@
       </div>
     </div>
     <main id="mainContent" class="container">
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-      >
-        Launch demo modal
-      </button>
       <div id="recipeContainer" class="row justify-content-center"></div>
     </main>
     <div class="mt-5 pt-5 pb-5 footer">
@@ -134,7 +126,7 @@
     </div>
     <div
       class="modal fade"
-      id="exampleModal"
+      id="mealModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -145,8 +137,7 @@
             <h5 class="modal-title" id="modal-title">Arroz con pollo</h5>
             <button
               type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
+              class="btn-close btn-close-modal"
               aria-label="Close"
             ></button>
           </div>
@@ -220,17 +211,18 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
+            <button type="button" class="btn btn-secondary btn-close-modal">
               Cerrar
             </button>
           </div>
         </div>
       </div>
     </div>
+    <div
+      class="modal-backdrop fade show"
+      id="backdrop"
+      style="display: none"
+    ></div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
       integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"

@@ -62,7 +62,10 @@ document.addEventListener("click", function (e) {
             "align-items-center"
           );
           let img = document.createElement("img");
-          img.src = "a";
+          img.src =
+            "https://www.themealdb.com/images/ingredients/" +
+            ingredientName.replace(" ", "%20") +
+            "-Small.png";
           img.classList.add("img-fluid");
           imgCol.appendChild(img);
           let infoCol = document.createElement("div");
@@ -83,5 +86,23 @@ document.addEventListener("click", function (e) {
         }
       }
     });
+    openModal();
   }
+});
+
+function openModal() {
+  document.getElementById("backdrop").style.display = "block";
+  document.getElementById("mealModal").style.display = "block";
+  document.getElementById("mealModal").classList.add("show");
+}
+function closeModal() {
+  document.getElementById("backdrop").style.display = "none";
+  document.getElementById("mealModal").style.display = "none";
+  document.getElementById("mealModal").classList.remove("show");
+}
+
+document.querySelectorAll(".btn-close-modal").forEach((item) => {
+  item.addEventListener("click", function (e) {
+    closeModal();
+  });
 });
