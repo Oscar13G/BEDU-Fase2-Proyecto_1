@@ -145,7 +145,7 @@ function buildListMeals(data) {
     cardImage.alt = meal.strMeal.split(" ").join("");
     cardImage.src = meal.strMealThumb;
 
-    cardBody.className = "card-body";
+    cardBody.className = "card-body d-flex justify-content-center align-items-center";
     titleBody.className = "card-title text-center";
     divList.appendChild(divCol);
     divCol.appendChild(divCard);

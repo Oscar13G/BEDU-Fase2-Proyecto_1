@@ -39,3 +39,18 @@ div.card:hover {
 img.float-start {
   max-height: 400px;
 }
+#titleListMeals{
+  padding-bottom: 15px;
+  text-align: center;
+}
+.modal-header{
+  background-color: rgb(227, 120, 20);
+}
+#instructionsTitle{
+  margin: 15px;
+  padding-top: 10px;
+  text-decoration: underline;
+}
+/* .modal-body{
+  background-color: rgb(177, 173, 173);
+} */
