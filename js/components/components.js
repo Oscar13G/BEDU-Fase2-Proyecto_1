@@ -73,10 +73,10 @@ function createGitHubCard(user) {
     '" class="card-img-top" alt="profilePhoto" />' +
     '<div class="card-body user-info">' +
     '<h5 class="card-user-name">' +
-    user.login +
+    user.git_user +
     "</h5>" +
     '<h5 class="card-user-name">' +
-    user.realName +
+    user.name +
     "</h5>" +
     '<a href="' +
     user.html_url +

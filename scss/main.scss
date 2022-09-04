@@ -5,7 +5,7 @@ $contrast: #ffba08;
 $hover: #d00000;
 
 .meal-banner {
-  background-image: url("../img/bannerexample.png");
+  background-image: url("../img/banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 700px;
@@ -277,8 +277,6 @@ $hover: #d00000;
       font-weight: normal;
     }
   }
-}
-#qrCode {
 }
 .btn-project {
   background-color: $primary;
