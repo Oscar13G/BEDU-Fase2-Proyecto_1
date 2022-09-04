@@ -27,6 +27,7 @@
                     title="Home">
                     <!-- boton home -->
                     <img id="homeNav" alt="house-door-fill" width="30" height="24">
+                    <!-- <img id="homeNav" src="./assets/home.svg" alt="house-door-fill" width="30" height="24"> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -44,14 +45,17 @@
                     <a class="navbar-brand" href="https://www.themealdb.com/api.php" target="_blank"
                         data-bs-toggle="tooltip" data-bs-placement="top" title="API">
                         <img id="apiNav" alt="foodapi" width="30" height="24">
+                        <!-- <img id="apiNav" src="./assets/api.svg" alt="foodapi" width="30" height="24"> -->
                     </a>
                     <a class="navbar-brand" href="https://github.com/Oscar13G/BEDU-Fase2-Proyecto_1" target="_blank"
                         data-bs-toggle="tooltip" data-bs-placement="top" title="GitHub">
                         <img id="githubNav" alt="github" width="30" height="24">
+                        <!-- <img id="githubNav" src="./assets/git.svg" alt="github" width="30" height="24"> -->
                     </a>
                     <a class="navbar-brand" href="https://getbootstrap.com/" target="_blank" data-bs-toggle="tooltip"
                         data-bs-placement="top" title="Bootstrap">
                         <img id="bootstrapNav" alt="bootstrap" width="30" height="24">
+                        <!-- <img id="bootstrapNav" src="./assets/bootstrap.svg" alt="bootstrap" width="30" height="24"> -->
                     </a>
                 </div>
             </div>
@@ -59,28 +63,31 @@
     </div>
 
     <!-- Search -->
-    <div id="recipeSearch" class="container-fluid" >
+    <div id="recipeSearch" class="container-fluid">
         <!-- title -->
         <h1 id="title">Recipe<br>Search</h1>
-        <!-- Barra de busqueda -->
-        <div id="search" class="d-flex justify-content-center px-5 mx-5">
-            <input id="inputText" class="form-control" type="text" placeholder="Search" aria-label="">
-
-            <button class="btn btn-info" type="button" id="searchBtn" data-bs-toggle="tooltip" data-bs-placement="top"
-                title="Search">
-
-                <div class="d-flex justify-content-center align-items-center">
-                    <img id="searchIcon" alt="search">
-                </div>
-            </button>
-
-            <button class="btn btn-warning " type="button" id="randomBtn" data-bs-toggle="tooltip"
-                data-bs-placement="top" title="Random">
-
-                <div class="d-flex justify-content-center align-items-center">
-                    <img id="randomIcon" alt="suffle">
-                </div>
-            </button>
+        <!-- Barra y botones -->
+        <div id="search" class="row d-flex justify-content-center">
+            <div class="col-6">
+                <!-- input text -->
+                <input id="inputText" class="form-control" type="text" placeholder="Search">
+                <!-- button search -->
+                <button class="btn btn-info" type="button" id="searchBtn" data-bs-toggle="tooltip"
+                    data-bs-placement="top" title="Search">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img id="searchIcon" alt="search">
+                        <!-- <img id="searchIcon" src="./assets/search.svg" alt="search"> -->
+                    </div>
+                </button>
+                <!-- button random -->
+                <button class="btn btn-warning " type="button" id="randomBtn" data-bs-toggle="tooltip"
+                    data-bs-placement="top" title="Random">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <img id="randomIcon" alt="suffle">
+                        <!-- <img id="randomIcon" src="./assets/random.svg" alt="suffle"> -->
+                    </div>
+                </button>
+            </div>
         </div>
     </div>
 
@@ -107,8 +114,8 @@
                             <div class="accordion" id="ingredientsModal">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
                                             aria-controls="collapseOne">
                                             Ingredients
                                         </button>
