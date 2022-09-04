@@ -1,4 +1,8 @@
-import { buildRecipeCard } from "./components/components.js";
+import {
+  buildRecipeCard,
+  createCardIngredient,
+} from "./components/components.js";
+const recipesTitle = document.getElementById("titleRecipesContainer");
 // Funcion API random
 function getMealRandom() {
   return fetch("https://themealdb.com/api/json/v1/1/random.php").then(
@@ -6,7 +10,7 @@ function getMealRandom() {
   );
 }
 // Funcion API search
-function getMealMach(value) {
+function getMealMatch(value) {
   if (value !== "") {
     return fetch(
       `https://www.themealdb.com/api/json/v1/1/search.php?s=${value}`
@@ -19,18 +23,40 @@ function getMealDetails(id_meal) {
     "https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + id_meal
   ).then((response) => response.json());
 }
-function cleanRecipes() {
-  document.getElementById("recipeContainer").innerHTML = "";
-}
+//!Traer receta random al clicar el boton
 document.querySelector("#randomBtn").addEventListener("click", function (e) {
   cleanRecipes();
   getMealRandom().then(function (data) {
+    recipesTitle.innerHTML = "Recetas";
     const card = buildRecipeCard(data.meals[0]);
     document.getElementById("recipeContainer").append(card);
   });
   e.preventDefault();
 });
-
+//!Boton de busqueda
+document.querySelector("#searchBtn").addEventListener("click", function (e) {
+  cleanRecipes();
+  const searchTerm = document.getElementById("searchInput").value;
+  if (searchTerm != null && searchTerm != 0) {
+    let recipesRequest = getMealMatch(searchTerm);
+    recipesRequest.then(function (recipes) {
+      if (recipes.meals) {
+        recipesTitle.innerHTML =
+          Object.keys(recipes.meals).length +
+          " Recetas para la busqueda: " +
+          searchTerm;
+        recipes.meals.forEach(function (recipe) {
+          const card = buildRecipeCard(recipe);
+          document.getElementById("recipeContainer").append(card);
+        });
+      } else {
+        recipesTitle.innerHTML = "Recetas no encontradas.";
+      }
+    });
+  }
+  e.preventDefault();
+});
+//!Agregar tarjeta y hacer append
 document.addEventListener("click", function (e) {
   if (e.target.classList.contains("btnMealDetails")) {
     const id_meal = e.target.getAttribute("idMeal");
@@ -50,36 +76,10 @@ document.addEventListener("click", function (e) {
         const ingredientName = data[actual];
         if (ingredientName != null && ingredientName != "") {
           const ingredientQuantity = data[actualQuantity];
-          let ingCard = document.createElement("div");
-          ingCard.classList.add("card-ingrediente");
-          let row = document.createElement("div");
-          row.classList.add("row");
-          let imgCol = document.createElement("div");
-          imgCol.classList.add(
-            "col-2",
-            "d-flex",
-            "justify-content-center",
-            "align-items-center"
+          let ingCard = createCardIngredient(
+            ingredientName,
+            ingredientQuantity
           );
-          let img = document.createElement("img");
-          img.src =
-            "https://www.themealdb.com/images/ingredients/" +
-            ingredientName.replace(" ", "%20") +
-            "-Small.png";
-          img.classList.add("img-fluid");
-          imgCol.appendChild(img);
-          let infoCol = document.createElement("div");
-          infoCol.classList.add("col-10", "ingredient-info");
-          infoCol.innerHTML =
-            "<h5>Ingrediente: <span>" +
-            ingredientName +
-            "</span></h5>" +
-            "<h5>Cantidad: <span>" +
-            ingredientQuantity +
-            "</span></h5>";
-          row.append(imgCol);
-          row.append(infoCol);
-          ingCard.append(row);
           document.getElementById("ingredientList").append(ingCard);
         } else {
           break;
@@ -89,7 +89,7 @@ document.addEventListener("click", function (e) {
     openModal();
   }
 });
-
+//!Funciones para el modal
 function openModal() {
   document.getElementById("backdrop").style.display = "block";
   document.getElementById("mealModal").style.display = "block";
@@ -100,9 +100,12 @@ function closeModal() {
   document.getElementById("mealModal").style.display = "none";
   document.getElementById("mealModal").classList.remove("show");
 }
-
 document.querySelectorAll(".btn-close-modal").forEach((item) => {
   item.addEventListener("click", function (e) {
     closeModal();
   });
 });
+//!Limpiar recetas
+function cleanRecipes() {
+  document.getElementById("recipeContainer").innerHTML = "";
+}

@@ -1,3 +1,4 @@
+//!Crear tarjeta de la receta
 function buildRecipeCard(data) {
   const card = document.createElement("div");
   const nombreReceta = data.strMeal;
@@ -27,4 +28,38 @@ function buildRecipeCard(data) {
     "</div>";
   return card;
 }
-export { buildRecipeCard };
+//!Crear tarjeta del ingrediente
+function createCardIngredient(name, quantity) {
+  let ingCard = document.createElement("div");
+  ingCard.classList.add("card-ingrediente");
+  let row = document.createElement("div");
+  row.classList.add("row");
+  let imgCol = document.createElement("div");
+  imgCol.classList.add(
+    "col-2",
+    "d-flex",
+    "justify-content-center",
+    "align-items-center"
+  );
+  let img = document.createElement("img");
+  img.src =
+    "https://www.themealdb.com/images/ingredients/" +
+    name.replace(" ", "%20") +
+    "-Small.png";
+  img.classList.add("img-fluid");
+  imgCol.appendChild(img);
+  let infoCol = document.createElement("div");
+  infoCol.classList.add("col-10", "ingredient-info");
+  infoCol.innerHTML =
+    "<h5>Ingrediente: <span>" +
+    name +
+    "</span></h5>" +
+    "<h5>Cantidad: <span>" +
+    quantity +
+    "</span></h5>";
+  row.append(imgCol);
+  row.append(infoCol);
+  ingCard.append(row);
+  return ingCard;
+}
+export { buildRecipeCard, createCardIngredient };
