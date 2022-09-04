@@ -282,4 +282,11 @@
   font-weight: normal;
 }
 
+.btn-project {
+  background-color: #03071e;
+  color: #ffba08;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=output.css.map */

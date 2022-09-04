@@ -62,4 +62,29 @@ function createCardIngredient(name, quantity) {
   ingCard.append(row);
   return ingCard;
 }
-export { buildRecipeCard, createCardIngredient };
+function createGitHubCard(user) {
+  console.log(user);
+  let card = document.createElement("div");
+  card.classList.add("col-12", "col-md-4", "my-20", "user-card-col");
+  card.innerHTML =
+    '<div class="card">' +
+    '<img src="' +
+    user.avatar_url +
+    '" class="card-img-top" alt="profilePhoto" />' +
+    '<div class="card-body user-info">' +
+    '<h5 class="card-user-name">' +
+    user.login +
+    "</h5>" +
+    '<h5 class="card-user-name">' +
+    user.realName +
+    "</h5>" +
+    '<a href="' +
+    user.html_url +
+    '" class="btn btn-primary">' +
+    '<i class="fa fa-github"></i>&nbsp; &nbsp;Github' +
+    "</a>" +
+    "</div>" +
+    "</div>";
+  return card;
+}
+export { buildRecipeCard, createCardIngredient, createGitHubCard };
