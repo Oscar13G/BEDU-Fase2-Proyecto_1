@@ -1,0 +1,9 @@
+//!Agregar tarjeta y hacer append
+
+//!Boton de busqueda
+
+//!Funciones para el modal
+
+//!Limpiar recetas
+
+//!Traer receta random al clicar el boton

@@ -2,6 +2,7 @@ import {
   buildRecipeCard,
   createCardIngredient,
 } from "./components/components.js";
+import "../scss/main.scss";
 const recipesTitle = document.getElementById("titleRecipesContainer");
 // Funcion API random
 function getMealRandom() {

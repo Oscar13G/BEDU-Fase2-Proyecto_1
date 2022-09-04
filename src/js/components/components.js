@@ -63,7 +63,6 @@ function createCardIngredient(name, quantity) {
   return ingCard;
 }
 function createGitHubCard(user) {
-  console.log(user);
   let card = document.createElement("div");
   card.classList.add("col-12", "col-md-4", "my-20", "user-card-col");
   card.innerHTML =

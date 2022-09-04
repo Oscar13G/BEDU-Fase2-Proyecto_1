@@ -1,5 +1,6 @@
 import { createGitHubCard } from "./components/components.js";
 const githubApiUrl = "https://api.github.com/users";
+import "../scss/main.scss";
 const projectMembers = [
   {
     git_user: "Axel-Padilla",
@@ -50,5 +51,11 @@ function loadGithubUsers() {
     document.getElementById("usersContainer").append(card);
   }
 }
-
+function loadQrCode() {
+  new QRCode(
+    document.getElementById("qrcode"),
+    "https://github.com/Oscar13G/BEDU-Fase2-Proyecto_1"
+  );
+}
 loadGithubUsers();
+loadQrCode();
