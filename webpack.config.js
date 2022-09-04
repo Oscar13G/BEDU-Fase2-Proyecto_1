@@ -36,7 +36,7 @@ module.exports = {
     aboutUs: "./src/js/aboutUs.js",
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "./dist"),
     filename: "indexBundle.js",
     filename: "[name]Bundle.js",
   },
