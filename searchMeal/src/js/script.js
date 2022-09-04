@@ -1,3 +1,4 @@
+import imgYt from '../assets/youtube.svg';
 const titleList = document.getElementById("titleListMeals");
 const divList = document.getElementById("listMeals");
 let input;
@@ -113,7 +114,7 @@ function buildModal(meal) {
     imgYoutube.setAttribute("data-bs-toggle", "tooltip");
     imgYoutube.setAttribute("data-bs-placement", "top");
     imgYoutube.setAttribute("title", "Youtube");
-    imgYoutube.src = "img/youtube.svg";
+    imgYoutube.src = `${imgYt}`;
     imgYoutube.width = "40";
     imgYoutube.height = "34";
     instructionsTitle.appendChild(linkYoutube);
