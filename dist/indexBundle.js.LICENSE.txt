@@ -1,0 +1,11 @@
+//!Agregar tarjeta y hacer append
+
+//!Boton de busqueda
+
+//!Crear tarjeta de la receta
+
+//!Crear tarjeta del ingrediente
+
+//!Limpiar recetas
+
+//!Traer receta random al clicar el boton

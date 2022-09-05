@@ -1,0 +1,286 @@
+$font_title: "Montserrat", sans-serif;
+$font_text: "Roboto", sans-serif;
+$primary: #03071e;
+$contrast: #ffba08;
+$hover: #d00000;
+
+.meal-banner {
+  background-image: url("../img/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.banner-title h2 {
+  font-size: 60px;
+  color: white;
+  font-weight: bold;
+  font-family: $font_title;
+  opacity: 1.2;
+}
+.banner-input {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.banner-input input[type="text"] {
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  height: 50px;
+  width: 300px;
+  padding-left: 15px;
+  font-size: 30px;
+}
+.banner-buttons button {
+  width: 100%;
+  text-decoration: none;
+  color: $contrast;
+  background-color: $primary;
+  border-radius: 25px;
+  height: 50px;
+  width: 150px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  padding: 5px 5px;
+  border-color: $contrast;
+  &:hover {
+    background-color: $contrast;
+    color: $primary;
+    border-color: $primary;
+  }
+}
+#mainContent {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.card-meal {
+  .card-body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h5 {
+      font-family: $font_title;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .card-btn {
+      width: 100%;
+      a {
+        background-color: $primary;
+        color: $contrast;
+        font-family: $font_title;
+        font-weight: bold;
+        width: 100%;
+      }
+    }
+  }
+  &:hover {
+    transform: scale(1.2) 1s linear;
+    box-shadow: -3px 20px 40px 1px rgba(0, 0, 0, 0.56);
+    -webkit-box-shadow: -3px 20px 40px 1px rgba(0, 0, 0, 0.56);
+    -moz-box-shadow: -3px 20px 40px 1px rgba(0, 0, 0, 0.56);
+  }
+}
+
+.footer {
+  background: $primary;
+  color: $contrast;
+  h2 {
+    font-family: $font_title;
+    font-weight: bold;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ul {
+      list-style-type: none;
+    }
+    li a {
+      color: $contrast;
+      text-decoration: none;
+      font-family: $font_title;
+      transition: color 0.2s;
+      &:hover {
+        text-decoration: none;
+        color: $hover;
+      }
+    }
+    margin-bottom: 20px;
+  }
+  .info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    i {
+      font-size: 25px;
+    }
+    a {
+      color: $contrast;
+      font-family: $font_text;
+      transition: color 0.2s;
+      &:hover {
+        color: $hover;
+      }
+    }
+    img {
+      width: auto;
+      height: 100%;
+      max-height: 150px;
+    }
+  }
+  .redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+      font-size: 18px;
+    }
+    .redes-container {
+      a {
+        text-decoration: none;
+        font-family: $font_text;
+        color: $contrast;
+        &:hover {
+          color: $hover;
+        }
+      }
+    }
+  }
+}
+.navbar {
+  background-color: $primary;
+  a {
+    color: $contrast;
+    &:hover {
+      color: $hover;
+    }
+  }
+}
+.navbar-toggler {
+  border-color: $contrast;
+  .icon-navbar {
+    color: $contrast;
+    font-size: 28px;
+  }
+}
+.card-container {
+  margin-bottom: 20px;
+}
+.navbar-nav li {
+  float: none;
+  display: inline-block;
+  vertical-align: bottom;
+  font-family: $font_title;
+}
+.navbar-brand {
+  font-family: $font_title;
+  font-weight: bold;
+}
+.main-about {
+  margin-top: 100px;
+}
+.container-info-web {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container-desc-web {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h3 {
+    text-align: center;
+    font-family: $font_title;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  p {
+    font-family: $font_text;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+.user-card-col {
+  margin-bottom: 20px;
+  .user-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h5 {
+      font-family: $font_title;
+      font-weight: bold;
+      font-size: 25px;
+    }
+    a {
+      background-color: $primary;
+      color: $contrast;
+      font-family: $font_title;
+      font-size: 20px;
+      font-weight: bold;
+      width: 100%;
+    }
+  }
+}
+.modal-header {
+  background-color: $contrast;
+  color: $primary;
+  h5 {
+    font-family: $font_title;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+  }
+}
+.accordion-header {
+  button {
+    background-color: $primary;
+    color: $contrast;
+  }
+}
+
+.instruc-general-recipe {
+  margin-top: 20px;
+  a {
+    text-decoration: none;
+    text-align: center;
+    font-family: $font_title;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  h5 {
+    font-family: $font_title;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  p {
+    font-family: $font_text;
+  }
+}
+.ingredient-info {
+  h5 {
+    font-family: $font_title;
+    font-weight: bold;
+    span {
+      font-family: $font_text;
+      font-weight: normal;
+    }
+  }
+}
+.btn-project {
+  background-color: $primary;
+  color: $contrast;
+  font-family: $font_title;
+  font-weight: bold;
+}
